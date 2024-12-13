@@ -1,8 +1,9 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    id("maven-publish")
 }
-apply(from = "push-maven.gradle")
+group = "com.github.kemruto"
 android {
     namespace = "com.kemruto.mylibrary"
     compileSdk = 34
