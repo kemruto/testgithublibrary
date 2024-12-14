@@ -6,6 +6,15 @@ plugins {
 android {
     namespace 'com.example.test'
     compileSdk 34
+    buildscript {
+        repositories {
+            google()
+            mavenCentral()
+        }
+        dependencies {
+            classpath libs.gradle
+        }
+    }
 
     defaultConfig {
         applicationId "com.example.test"
@@ -47,7 +56,6 @@ android {
 }
 
 dependencies {
-
     implementation libs.androidx.core.ktx
     implementation libs.androidx.lifecycle.runtime.ktx
     implementation libs.androidx.activity.compose
